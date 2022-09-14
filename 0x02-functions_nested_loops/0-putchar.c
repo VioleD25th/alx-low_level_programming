@@ -1,9 +1,20 @@
-#include <stdio.h>
+#include "main.h"
 /**
- * This program prints _putchar and a newline character
- **/
+ * main - Entry point
+ * Description: prints 'Main \n'
+ * Return: Always 0 (success)
+ */
 int main(void)
 {
-	print ("_putchar \n");
-	return (0);
+char str[] = "main\n";
+int i = 0;
+
+while (str[i] != '\0')
+	{
+	char c = str[i];
+
+	_putchar(c);
+	i++;
+	}
+return (0);
 }
