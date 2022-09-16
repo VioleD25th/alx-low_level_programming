@@ -1,33 +1,23 @@
-#include "mainn.h"
+#include <stdio.h>
+#include "main.h"
 
 /**
- * print_triangle - check for a digit
- * @size : integer type
- * Return:void
- */
+* print_number - Prints a number
+* @n: The number to print
+*/
 
-void print_triangle(int size)
+void print_number(int n)
 {
-	int i = 1, ii;
+	unsigned int num = n;
 
-	while (i <= size && size > 0)
+	if (n < 0)
 	{
-		ii = 0;
-		while (ii < size - i)
-		{
-			_putchar(' ');
-			ii++;
-		}
-		ii = 0;
-		while (ii < i)
-		{
-			_putchar('#');
-			ii++;
-		}
-
-		_putchar('\n');
-		i++;
+		putchar('-');
+		num = -num;
 	}
-	if (i == 1)
-		_putchar('\n');
+	if (num > 9)
+	{
+		print_number(num / 10);
+	}
+	putchar(num % 10 + '0');
 }
